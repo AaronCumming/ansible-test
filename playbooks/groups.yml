@@ -1,0 +1,9 @@
+---
+- name: Create groups
+  hosts: localhost
+
+  tasks:
+    - name: Ensure developer group exists
+      ansible.builtin.group:
+        name: developer
+        state: present

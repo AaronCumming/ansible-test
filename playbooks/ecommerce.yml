@@ -1,0 +1,23 @@
+---
+- name: Pull image and start the container
+  hosts: localhost
+  gather_facts: false
+
+  tasks:
+    - name: Pull image
+      community.docker.docker_image_pull:
+        name: webkul/bagisto
+        tag: "2.3.6"
+
+    - name: Start container
+      community.docker.docker_container:
+        cleanup: false
+        detach: true
+        image: webkul/bagisto:2.3.6
+        name: bagisto
+        ports:
+          - "8082:80"
+
+    - name: Show output
+      ansible.builtin.debug:
+        msg: "{{ output.container.Output }}"
