@@ -1,0 +1,21 @@
+---
+- name: Grafana - Pull image and start the container
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Pull image
+      community.docker.docker_image_pull:
+        name: grafana/grafana
+        tag: main-ubuntu
+
+    - name: Start container
+      community.docker.docker_container:
+        cleanup: false
+        detach: true
+        image: grafana/grafana:main-ubuntu
+        name: my-grafana-container
+        output_logs: true
+
+    - name: Show output
+      ansible.builtin.debug:
+        msg: "{{ output.container.Output }}"
