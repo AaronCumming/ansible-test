@@ -7,3 +7,8 @@
       ansible.builtin.group:
         name: developer
         state: present
+
+    - name: Ensure group "admin" exists
+      ansible.builtin.group:
+        name: admin
+        state: present
