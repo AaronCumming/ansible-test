@@ -1,10 +1,4 @@
 # Documentation: /docs/smoke.md
-# one playbook for service
-
-# or one playbook for download all containers
-# or one playbook for running all containers
-# then playbooks for other stuff
-
 
 - name: Smoke Tests
   hosts: localhost

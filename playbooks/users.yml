@@ -1,3 +1,5 @@
+# Documentation: /docs/users.md
+
 - name: Create a user 'dev1' with a home directory
   ansible.builtin.user:
     name: dev1

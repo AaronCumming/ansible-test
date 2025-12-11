@@ -1,3 +1,6 @@
+# Documentation: /docs/grafana.md
+
+
 ---
 - name: Grafana - Pull image and start the container
   hosts: localhost

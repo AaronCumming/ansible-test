@@ -1,3 +1,5 @@
+# Documentation: /docs/admin.md
+
 - name: admin creation
   hosts: localhost
   tasks:

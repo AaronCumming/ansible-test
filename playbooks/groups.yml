@@ -1,3 +1,6 @@
+# Documentation: /docs/groups.md
+
+
 ---
 - name: Create groups
   hosts: localhost
